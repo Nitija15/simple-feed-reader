@@ -23,6 +23,7 @@ namespace SimpleFeedReader.Services
         {
             var news = new List<NewsStoryViewModel>();
             var feedUri = new Uri(feedUrl);
+            var df;
 
             using (var xmlReader = XmlReader.Create(feedUri.ToString(),
                    new XmlReaderSettings { Async = true }))
